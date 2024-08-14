@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Localhost Request Test</title>
+</head>
+<body>
+    <h1>Testing Request to 0.0.0.0:8000</h1>
+    <button id="testButton">Send Request</button>
+
+    <script>
+        document.getElementById('testButton').addEventListener('click', function() {
+            fetch('http://0.0.0.0:8000')
+            .then(response => response.text())
+            .then(data => console.log('Response:', data))
+            .catch(error => console.error('Error:', error));
+        });
+    </script>
+</body>
+</html>
